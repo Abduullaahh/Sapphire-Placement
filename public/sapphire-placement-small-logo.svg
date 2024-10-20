@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="#007BB8"/>
+  
+  <!-- White inner circle for contrast -->
+  <circle cx="200" cy="200" r="170" fill="white"/>
+  
+  <!-- Blue inner circle -->
+  <circle cx="200" cy="200" r="165" fill="#007BB8"/>
+  
+  <!-- Curved text paths -->
+  <path id="upperArc" d="M 40 200 A 160 160 0 0 1 360 200" fill="none"/>
+  <path id="lowerArc" d="M 360 200 A 160 160 0 0 1 40 200" fill="none"/>
+  
+  <!-- Text on paths -->
+  <text fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="bold">
+    <textPath href="#upperArc" startOffset="50%" text-anchor="middle">
+      SAPPHIRE
+    </textPath>
+  </text>
+  
+  <!-- Central text -->
+  <text x="200" y="210" 
+        font-family="Arial, sans-serif" 
+        font-size="32" 
+        font-weight="bold"
+        fill="white" 
+        text-anchor="middle">
+    PLACEMENT
+  </text>
+  
+  <text x="200" y="250" 
+        font-family="Arial, sans-serif" 
+        font-size="32"
+        font-weight="bold" 
+        fill="white" 
+        text-anchor="middle">
+    LIMITED
+  </text>
+</svg>
