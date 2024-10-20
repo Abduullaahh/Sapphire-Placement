@@ -1,8 +1,9 @@
 import Layout from '@/components/custom/layout'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Briefcase, FileText, Plane, Home } from 'lucide-react'
+import { Briefcase, FileText, Plane, Home, LucideProps } from 'lucide-react'
 import { useRouter } from 'next/router'
+import { ForwardRefExoticComponent, RefAttributes } from 'react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -48,7 +49,7 @@ const services = [
 export default function Services() {
   const router = useRouter()
 
-  const handleServiceClick = (service) => {
+  const handleServiceClick = (service: { id: any; title?: string; description?: string; icon?: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> }) => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('selectedService', JSON.stringify(service))
       router.push(`/services/${service.id}`)

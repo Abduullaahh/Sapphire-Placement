@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
-import { Briefcase, Phone, Mail, ChevronDown, Users, FileText, Plane, Home } from 'lucide-react'
+import { ForwardRefExoticComponent, RefAttributes, useState } from 'react'
+import { Briefcase, Phone, Mail, ChevronDown, Users, FileText, Plane, Home, LucideProps } from 'lucide-react'
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 
@@ -39,7 +39,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   ]
   const router = useRouter()
 
-  const handleServiceClick = (service) => {
+  const handleServiceClick = (service: { id: any; title: any; description: any; icon?: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>> }) => {
     if (typeof window !== 'undefined') {
       const serviceData = {
         id: service.id,
